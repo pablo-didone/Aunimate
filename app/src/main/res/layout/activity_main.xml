@@ -1,0 +1,81 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:id="@+id/lytMainLayout"
+        android:visibility="visible">
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/txtFilter"
+            android:layout_marginTop="5sp"
+            android:hint="@string/search_your_song"
+            android:layout_marginBottom="5sp"
+            android:textSize="13sp" />
+
+        <ListView
+            android:layout_width="match_parent"
+            android:layout_height="0sp"
+            android:layout_weight="1"
+            android:id="@+id/lstSounds"
+            android:layout_marginTop="5sp"/>
+
+
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="40sp"
+            android:text="@string/exit_help"
+            android:id="@+id/lblExitHelp"
+            android:gravity="center"
+            android:background="@color/light_blue"
+            android:textColor="#ffffffff" />
+
+    </LinearLayout>
+
+    <RelativeLayout
+        android:id="@+id/lytRetry"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone"
+        android:background="@android:color/white">
+
+        <ImageButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/btnRetry"
+            android:layout_centerVertical="true"
+            android:layout_centerHorizontal="true"
+            android:background="@android:color/transparent"
+            android:src="@drawable/retry"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/cant_load"
+            android:id="@+id/textView"
+            android:layout_above="@+id/btnRetry"
+            android:layout_centerHorizontal="true"
+            android:textSize="18sp"
+            android:textColor="@color/gray" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/tap_to_retry"
+            android:id="@+id/textView2"
+            android:layout_below="@+id/btnRetry"
+            android:layout_centerHorizontal="true"
+            android:textColor="@color/gray"
+            android:textSize="18sp" />
+
+    </RelativeLayout>
+
+
+</RelativeLayout>
